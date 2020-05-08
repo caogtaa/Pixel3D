@@ -1,44 +1,39 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <RootNamespace>Pixel3D.Engine</RootNamespace>
     <Configurations>Debug;Release;Retail</Configurations>
     <Platforms>AnyCPU;x64</Platforms>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>F:\workspace\Pixel3D\Backup\src\Pixel3D.Engine.FNA\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net40|AnyCPU'">
     <DefineConstants>TRACE;DEBUG;DEVELOPER</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net40|x64'">
     <DefineConstants>TRACE;DEBUG;DEVELOPER</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net40|AnyCPU'">
     <DefineConstants>TRACE;DEVELOPER</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net40|x64'">
     <DefineConstants>TRACE;DEVELOPER</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Retail|net40|AnyCPU'">
     <Optimize>true</Optimize>
     <DefineConstants>TRACE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Retail|net40|x64'">
     <Optimize>true</Optimize>
     <DefineConstants>TRACE</DefineConstants>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\ThirdParty\FNA\FNA.Core.csproj" />
     <ProjectReference Include="..\Pixel3D.ActorManagement\Pixel3D.ActorManagement.csproj" />
@@ -48,5 +43,4 @@
     <ProjectReference Include="..\Pixel3D.LoopRecorder\Pixel3D.LoopRecorder.csproj" />
     <ProjectReference Include="..\Pixel3D.Serialization\Pixel3D.Serialization.csproj" />
   </ItemGroup>
-
 </Project>
